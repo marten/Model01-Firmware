@@ -55,8 +55,6 @@
 // Support for an LED mode that prints the keys you press in letters 4px high
 // #include "Kaleidoscope-LED-AlphaSquare.h"
 
-#include "Kaleidoscope-SpaceCadet.h"
-
 // Support for Keyboardio's internal keyboard testing mode
 #include "Kaleidoscope-Model01-TestMode.h"
 
@@ -142,10 +140,10 @@ KEYMAPS(
    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
-   LockLayer(WORKMAN),  Key_6, Key_7, Key_8,     Key_9,         Key_0,         LockLayer(NUMPAD),
+   LockLayer(WORKMAN),  Key_6, Key_7, Key_8,     Key_9,         Key_0,         Key_Pause,
    Key_Enter,           Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_Equals,
                         Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
-   Key_RightAlt,        Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
+   Key_Insert,           Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
    Key_RightShift,      Key_LeftAlt, Key_Spacebar, Key_RightControl,
    ShiftToLayer(FUNCTION)),
 
@@ -157,7 +155,7 @@ KEYMAPS(
    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
-   ___,          Key_6, Key_7, Key_8,     Key_9,         Key_0,         LockLayer(NUMPAD),
+   ___,          Key_6, Key_7, Key_8,     Key_9,         Key_0,         ___,
    Key_Enter,    Key_J, Key_F, Key_U,     Key_P,         Key_Semicolon, Key_Equals,
                  Key_Y, Key_N, Key_E,     Key_O,         Key_I,         Key_Quote,
    ___,          Key_K, Key_L, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
@@ -191,7 +189,7 @@ KEYMAPS(
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
    Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
                                Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  ___,              ___,
-   Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe,
+   Key_Pause,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe,
    ___, ___, Key_Enter, ___,
    ___)
 
@@ -340,8 +338,6 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // The stalker effect lights up the keys you've pressed recently
   StalkerEffect,
   
-  SpaceCadet,
-
   // The numpad plugin is responsible for lighting up the 'numpad' mode
   // with a custom LED effect
   NumPad,
